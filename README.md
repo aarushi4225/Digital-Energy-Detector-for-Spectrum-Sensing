@@ -63,21 +63,21 @@ Where:
 
 ## Repository Structure
 
-├── EnergyDetector.v # Main Verilog energy detector module
+├── energy_detection.m              # MATLAB scripts and functions for signal generation
 
-├── EnergyDetector_tb.v # Testbench for simulation and verification
+├── Im_hex.txt                      # Hex file with imaginary part of input samples
 
-├── Re_hex # Hex file with real part of input samples
+├── Re_hex.txt                      # Hex file with real part of input samples
 
-├── Im_hex # Hex file with imaginary part of input samples
+├── th_hex.txt                      # Hex file with threshold value
 
-├── th_hex # Hex file with threshold value
+├── README.md                       # Project documentation
 
-├── README.md # Project documentation (this file)
+├── energy_detector_tb_behav.wcfg   # Waveform for demonstration
 
-├── matlab/ # MATLAB scripts and functions for signal generation and fixed-point conversion
+├── energy_detection_tb.v           # Test bench
 
-└── Waveform/ # For demonstration
+└── energy_detector.v               # Main Verilog Module
 
 
 ## Usage
