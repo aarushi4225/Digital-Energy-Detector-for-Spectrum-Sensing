@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="energy_detector_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="energy_detector_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="6,436.034 ns"></ZoomStartTime>
+      <ZoomEndTime time="14,451.035 ns"></ZoomEndTime>
+      <Cursor1Time time="8,581.034 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="183"></NameColumnWidth>
+      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/energy_detector_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/en" type="logic">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/rxRe_tb" type="array">
+      <obj_property name="ElementShortName">rxRe_tb[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rxRe_tb[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/rxIm_tb" type="array">
+      <obj_property name="ElementShortName">rxIm_tb[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rxIm_tb[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/th_tb" type="array">
+      <obj_property name="ElementShortName">th_tb[42:0]</obj_property>
+      <obj_property name="ObjectShortName">th_tb[42:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/detected" type="logic">
+      <obj_property name="ElementShortName">detected</obj_property>
+      <obj_property name="ObjectShortName">detected</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/re_arr" type="array">
+      <obj_property name="ElementShortName">re_arr[0:999][15:0]</obj_property>
+      <obj_property name="ObjectShortName">re_arr[0:999][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/im_arr" type="array">
+      <obj_property name="ElementShortName">im_arr[0:999][15:0]</obj_property>
+      <obj_property name="ObjectShortName">im_arr[0:999][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/threshold_mem" type="array">
+      <obj_property name="ElementShortName">threshold_mem[0:0][42:0]</obj_property>
+      <obj_property name="ObjectShortName">threshold_mem[0:0][42:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/wl" type="array">
+      <obj_property name="ElementShortName">wl[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wl[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/nSample" type="array">
+      <obj_property name="ElementShortName">nSample[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nSample[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/th_width" type="array">
+      <obj_property name="ElementShortName">th_width[31:0]</obj_property>
+      <obj_property name="ObjectShortName">th_width[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/energy_detector_tb/dut1/acc" type="array">
+      <obj_property name="ElementShortName">acc[42:0]</obj_property>
+      <obj_property name="ObjectShortName">acc[42:0]</obj_property>
+   </wvobject>
+</wave_config>
