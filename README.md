@@ -40,7 +40,7 @@ Where:
 ## MATLAB Signal Generation
 
 - The signal generation scripts used to create test inputs for validating the energy detector are adapted from external sources.  
-- **Credits:** Original MATLAB code for signal generation is authored by [Author Name / External Source].  
+- **Credits:** `https://in.mathworks.com/matlabcentral/fileexchange/47181-energy-detection-zip`.  
 - These scripts generate representative wireless signal scenarios, including noisy and fading environments, to test spectrum sensing algorithms.
 
 ## Fixed-Point Conversion Using MATLAB
