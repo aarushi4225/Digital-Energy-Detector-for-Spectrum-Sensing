@@ -26,14 +26,15 @@ Verilog implementation of a high-speed digital energy detector module designed f
 - **Working Principle:** Measure the energy level of received signals over a bandwidth to infer PU presence.
   
 - **Formula:**
-  $$
-  E = \frac{1}{N} \sum_{n=0}^{N-1} |x[n]|^2
-  $$
-  Where:
-  - $$ E $$ is the energy,
-  - $$ x[n] $$ is the received sample at time $$ n $$,
-  - $$ N $$ is the number of samples.
-  
+The energy detection method determines the presence of a signal by measuring its energy.
+
+$E = \frac{1}{N} \sum_{n=0}^{N-1} |x[n]|^2$
+
+Where:
+* $E$ is the energy of the signal.
+* $x[n]$ is the received signal.
+* $N$ is the number of samples.
+
 - **Low Power:** Designs emphasize low power consumption to support battery-operated CR networks.
 
 ## MATLAB Signal Generation
@@ -62,7 +63,6 @@ Verilog implementation of a high-speed digital energy detector module designed f
 
 ## Repository Structure
 
-/EnergyDetector
 ├── EnergyDetector.v # Main Verilog energy detector module
 
 ├── EnergyDetector_tb.v # Testbench for simulation and verification
