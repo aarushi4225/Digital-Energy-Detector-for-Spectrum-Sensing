@@ -91,4 +91,10 @@ Where:
 
 - **Verilog HDL** – core hardware description language for FPGA implementation.  
 - **Xilinx Vivado** – FPGA synthesis and simulation.  
-- **MATLAB** – signal generation and fixed-point conversion.  
+- **MATLAB** – signal generation and fixed-point conversion.
+
+# Acknowledgement
+
+- Project guided by **Dr. Rohit Chaurasiya**, Department of Electrical Engineering, IIT Jammu.  
+- MATLAB signal generation code adapted from [`https://in.mathworks.com/matlabcentral/fileexchange/47181-energy-detection-zip`].  
+- Fixed Point conversion and Verilog Implementation Performed by - Aarushi Singh (Me).
