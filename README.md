@@ -1,6 +1,24 @@
 # Digital-Energy-Detector-for-Spectrum-Sensing
 Verilog Implementation of a high-speed digital energy detector module for efficient spectrum sensing.
 
+# Important Terminologies
+
+- **Cognitive Radio (CR)**: A smart radio that can detect available channels in a wireless spectrum and change transmission parameters accordingly.
+
+- **Primary User (PU)**: A licensed user of a specific frequency band that has priority over the spectrum.
+
+- **Secondary User (SU)**: An unlicensed user that can access the spectrum when it is not being used by the primary user.
+
+- **Spectrum Sensing**: The process of detecting unused frequency bands (spectrum holes) to enable secondary users to access them without interfering with primary users.
+
+- **Spectrum Hole**: A frequency band that is not currently being used by primary users and can be utilized by secondary users.
+
+- **Data Fusion Center (DFC)**: A centralized unit that collects and processes data from multiple secondary users to make decisions regarding spectrum occupancy.
+
+- **Cooperative Spectrum Sensing (CSS)**: A technique where multiple secondary users collaborate to improve the accuracy of spectrum sensing.
+
+- **Energy Detection**: A spectrum sensing technique that measures the energy level of received signals to detect the presence of primary users.
+
 ## Spectrum and Data Growth
 - Data Growth (2017-2025): Exponential increase in mobile data, reaching a 1122% growth by 2025.
 - Spectrum Deficit: Significant shortage of cellular spectrum, with a deficit of 853 MHz by 2025.
