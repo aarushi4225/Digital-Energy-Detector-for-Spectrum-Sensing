@@ -12,7 +12,8 @@ Verilog Implementation of a high-speed digital energy detector module for effici
 - How it Works: Measures the energy level of the received signal over a specific bandwidth to determine the presence of a primary user.
 - Low Power Consumption: Emphasis on designing circuits that minimize power usage while maintaining performance, crucial for battery-operated devices in cognitive radio networks.
 
-**Energy Detection Formula**
+**Energy Detection Formula:**
+
 The energy detection method determines the presence of a signal by measuring its energy.
 $E = \frac{1}{N} \sum_{n=0}^{N-1} |x[n]|^2$
 Where:
