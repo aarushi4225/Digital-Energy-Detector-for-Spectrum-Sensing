@@ -39,4 +39,47 @@ Where:
 * $x[n]$ is the received signal.
 * $N$ is the number of samples.
 
+# MATLAB Signal Generation
+* The signal generation scripts used to create test inputs for validating the energy detector are adapted from external sources.
+* Credits: Original MATLAB code for signal generation is authored by [Author Name / External Source].
+* These scripts generate representative wireless signal scenarios, including noisy and fading environments, to test spectrum sensing algorithms.
+
+# Fixed-Point Conversion Using MATLAB
+* Custom MATLAB functions convert floating-point signals into fixed-point representations compatible with the Verilog hardware module.
+* Specifically, data is converted into Q4.12 fixed-point format (16 bits total: 4 integer bits and 12 fractional bits).
+* This step ensures accurate hardware simulation and synthesis by aligning MATLAB generated data formats with FPGA bit widths and fixed-point arithmetic constraints.
+
+# Verilog Implementation
+*Implemented in Verilog HDL with synthesis targeted for Xilinx FPGAs using Vivado.
+*Features:
+          - 16-bit fixed-point sum-of-squares unit: Computes instantaneous energy for each complex input sample.
+          - 43-bit accumulator: Accumulates energy over 1000 samples to improve detection accuracy.
+          - Dedicated Multiply-Accumulate (MAC) unit: Enables high-throughput, real-time energy accumulation.
+          - Threshold Comparator: Continuously compares accumulated energy against a configurable threshold.
+          - Detection Flag: Asserts a detection signal indicating presence of a primary user when energy exceeds the threshold.
+
+**This architecture supports efficient, fast, and accurate spectrum sensing critical for cognitive radio performance.**
+
+# Repository Structure
+text
+/EnergyDetector
+├── EnergyDetector.v         # Main Verilog energy detector module
+├── EnergyDetector_tb.v      # Testbench for simulation and verification
+├── Re_hex                   # Hex file with real part of input samples
+├── Im_hex                   # Hex file with imaginary part of input samples
+├── th_hex                   # Hex file with threshold value
+├── README.md                # Project documentation (this file)
+├── matlab/                  # MATLAB scripts and functions for signal generation and fixed-point conversion
+└── docs/                    # Additional documentation (optional)
+
+# Usage
+* Prepare your input sample files (Re_hex, Im_hex) and threshold file (th_hex) in hex format corresponding to 16-bit Q4.12 fixed-point numbers.
+* Run EnergyDetector_tb.v in your preferred Verilog simulator (e.g., Vivado XSim).
+* Monitor the detected signal to observe spectrum occupancy detection events.
+* Adjust parameters such as sample size and threshold in EnergyDetector.v as needed.
+
+# Tools and Technologies
+- Verilog HDL – core hardware description language for FPGA implementation.
+- Xilinx Vivado – FPGA synthesis and simulation.
+- MATLAB – signal generation and fixed-point conversion.
   
