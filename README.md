@@ -8,7 +8,6 @@ Verilog implementation of a high-speed digital energy detector module designed f
 - **Primary User (PU):** Licensed user of a frequency band with transmission priority.
 - **Secondary User (SU):** Unlicensed user accessing spectrum opportunistically without interfering with PU.
 - **Spectrum Sensing:** Detecting unused frequency bands (spectrum holes) to enable SU access.
-- **Spectrum Hole:** Frequency bands unused by PU.
 - **Data Fusion Center (DFC):** Central unit that aggregates data from multiple SUs to improve sensing accuracy.
 - **Cooperative Spectrum Sensing (CSS):** Collaborative sensing by multiple SUs to enhance detection.
 - **Energy Detection:** Spectrum sensing technique measuring signal energy to detect PU presence.
@@ -37,22 +36,8 @@ Where:
 
 - **Low Power:** Designs emphasize low power consumption to support battery-operated CR networks.
 
-## MATLAB Signal Generation
-
-- The signal generation scripts used to create test inputs for validating the energy detector are adapted from external sources.  
-- **Credits:** `https://in.mathworks.com/matlabcentral/fileexchange/47181-energy-detection-zip`.  
-- These scripts generate representative wireless signal scenarios, including noisy and fading environments, to test spectrum sensing algorithms.
-
-## Fixed-Point Conversion Using MATLAB
-
-- Custom MATLAB functions convert floating-point signals into fixed-point representations compatible with the Verilog hardware module.  
-- Specifically, data is converted into **Q4.12 fixed-point format** (16 bits total: 4 integer bits and 12 fractional bits).  
-- This step ensures accurate hardware simulation and synthesis by aligning MATLAB generated data formats with FPGA bit widths and fixed-point arithmetic constraints.
-
-## Verilog Implementation
-
-- Implemented in Verilog HDL with synthesis targeted for Xilinx FPGAs using Vivado.  
-- Features:
+## Features:
+  - Custom MATLAB functions convert floating-point signals into fixed-point representations compatible with the Verilog hardware module. 
   - **16-bit fixed-point sum-of-squares unit:** Computes instantaneous energy for each complex input sample.  
   - **43-bit accumulator:** Accumulates energy over 1000 samples to improve detection accuracy.  
   - **Dedicated Multiply-Accumulate (MAC) unit:** Enables high-throughput, real-time energy accumulation.  
@@ -79,13 +64,6 @@ Where:
 
 └── energy_detector.v               # Main Verilog Module
 
-
-## Usage
-
-1. Prepare your input sample files (`Re_hex`, `Im_hex`) and threshold file (`th_hex`) in hex format corresponding to 16-bit Q4.12 fixed-point numbers.  
-2. Run `EnergyDetector_tb.v` in your preferred Verilog simulator (e.g., Vivado XSim).  
-3. Monitor the `detected` signal to observe spectrum occupancy detection events.  
-4. Adjust parameters such as sample size and threshold in `EnergyDetector.v` as needed.
 
 ## Tools and Technologies
 
