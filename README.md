@@ -9,7 +9,6 @@ Verilog implementation of a high-speed digital energy detector module designed f
 - **Secondary User (SU):** Unlicensed user accessing spectrum opportunistically without interfering with PU.
 - **Spectrum Sensing:** Detecting unused frequency bands (spectrum holes) to enable SU access.
 - **Data Fusion Center (DFC):** Central unit that aggregates data from multiple SUs to improve sensing accuracy.
-- **Cooperative Spectrum Sensing (CSS):** Collaborative sensing by multiple SUs to enhance detection.
 - **Energy Detection:** Spectrum sensing technique measuring signal energy to detect PU presence.
 
 ## Spectrum and Data Growth
