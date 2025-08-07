@@ -24,6 +24,7 @@ Where:
 * $x[n]$ is the received signal.
 * $N$ is the number of samples.
 
+---
 
 ### Implementation Features
 
@@ -36,6 +37,8 @@ The Verilog module implements a robust and configurable energy detection archite
 * **Detection Flag:** A flag is asserted when the accumulated energy exceeds the threshold, indicating the potential presence of a primary user.
 
 This hardware-centric approach provides the high performance required for real-time spectrum sensing in cognitive radio systems.
+
+---
 
 ### Repository Structure
 
@@ -50,11 +53,15 @@ This hardware-centric approach provides the high performance required for real-t
 └── energy_detector.v               # Main Verilog Module
 ```
 
+---
+
 ### Tools and Technologies
 
 - **Verilog HDL** – core hardware description language for FPGA implementation.  
 - **Xilinx Vivado** – FPGA synthesis and simulation.  
 - **MATLAB** – signal generation and fixed-point conversion.
+
+---
 
 ## Acknowledgement
 
