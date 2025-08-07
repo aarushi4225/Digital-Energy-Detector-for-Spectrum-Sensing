@@ -48,7 +48,6 @@ Where:
 ## Repository Structure
 
 ```text
-.
 ├── energy_detection.mc             # MATLAB scripts and functions for signal generation
 ├── Im_hex.txt                      # Hex file with imaginary part of input samples
 ├── Re_hex.txt                      # Hex file with real part of input samples
