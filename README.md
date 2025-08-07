@@ -1,30 +1,21 @@
 # Digital Energy Detector for Spectrum Sensing
 
-Verilog implementation of a high-speed digital energy detector module designed for efficient spectrum sensing in cognitive radio networks.
+This repository contains a Verilog implementation of a high-speed digital energy detector module designed for efficient spectrum sensing in cognitive radio networks. The project focuses on a hardware-based solution for real-time signal detection.
 
-## Important Terminologies
+---
 
-- **Cognitive Radio (CR):** A smart radio that detects available channels in wireless spectrum and adapts transmission parameters accordingly.
-- **Primary User (PU):** Licensed user of a frequency band with transmission priority.
-- **Secondary User (SU):** Unlicensed user accessing spectrum opportunistically without interfering with PU.
-- **Spectrum Sensing:** Detecting unused frequency bands (spectrum holes) to enable SU access.
-- **Data Fusion Center (DFC):** Central unit that aggregates data from multiple SUs to improve sensing accuracy.
-- **Energy Detection:** Spectrum sensing technique measuring signal energy to detect PU presence.
+### Important Concepts
 
-## Spectrum and Data Growth
+* **Cognitive Radio (CR):** A smart radio system that detects available channels in the wireless spectrum and adapts its transmission parameters.
+* **Spectrum Sensing:** The process of detecting unused frequency bands (spectrum holes) to enable opportunistic access for secondary users.
+* **Energy Detection:** A spectrum sensing technique that measures the energy level of a received signal to infer the presence of a primary user.
 
-- **Exponential Data Growth:** Mobile data expected to grow by 1122% from 2017 to 2025.
-- **Spectrum Deficit:** Predicted shortage of 853 MHz in cellular spectrum by 2025.
-- **Spectrum Management:** Various detection techniques including energy detection, cyclostationary, eigenvalue methods are used.
-- **Cooperative Sensing:** Multiple SUs with DFC collaborate for better spectrum awareness.
-- **Implementation:** Focus on efficient algorithms and hardware for real-time spectrum sensing and data handling.
+---
 
-## Energy Detection Technique
+### System Overview
+The core of this project is a digital energy detector that measures the energy of a received signal. The system architecture is designed to be efficient and fast, which is critical for real-time spectrum sensing.
 
-- **Working Principle:** Measure the energy level of received signals over a bandwidth to infer PU presence.
-  
-- **Formula:**
-The energy detection method determines the presence of a signal by measuring its energy.
+The energy ($E$) of the signal is calculated using the following formula:
 
 $E = \frac{1}{N} \sum_{n=0}^{N-1} |x[n]|^2$
 
@@ -33,19 +24,20 @@ Where:
 * $x[n]$ is the received signal.
 * $N$ is the number of samples.
 
-- **Low Power:** Designs emphasize low power consumption to support battery-operated CR networks.
 
-## Features:
-  - Custom MATLAB functions convert floating-point signals into fixed-point representations compatible with the Verilog hardware module. 
-  - **16-bit fixed-point sum-of-squares unit:** Computes instantaneous energy for each complex input sample.  
-  - **43-bit accumulator:** Accumulates energy over 1000 samples to improve detection accuracy.  
-  - **Dedicated Multiply-Accumulate (MAC) unit:** Enables high-throughput, real-time energy accumulation.  
-  - **Threshold Comparator:** Continuously compares accumulated energy against a configurable threshold.  
-  - **Detection Flag:** Asserts a detection signal indicating presence of a primary user when energy exceeds the threshold.  
-  
-- This architecture supports efficient, fast, and accurate spectrum sensing critical for cognitive radio performance.
+### Implementation Features
 
-## Repository Structure
+The Verilog module implements a robust and configurable energy detection architecture with the following features:
+
+* **Fixed-Point Arithmetic:** A custom MATLAB script is used to convert floating-point signals into a fixed-point representation suitable for hardware implementation.
+* **High-Throughput Processing:** A dedicated multiply-accumulate (MAC) unit computes the instantaneous energy for each complex input sample.
+* **Accumulation Unit:** A dedicated accumulator gathers energy over a configurable number of samples to improve detection accuracy.
+* **Threshold Comparison:** A comparator continuously checks the accumulated energy against a configurable threshold value.
+* **Detection Flag:** A flag is asserted when the accumulated energy exceeds the threshold, indicating the potential presence of a primary user.
+
+This hardware-centric approach provides the high performance required for real-time spectrum sensing in cognitive radio systems.
+
+### Repository Structure
 
 ```text
 ├── energy_detection.mc             # MATLAB scripts and functions for signal generation
@@ -58,13 +50,13 @@ Where:
 └── energy_detector.v               # Main Verilog Module
 ```
 
-## Tools and Technologies
+### Tools and Technologies
 
 - **Verilog HDL** – core hardware description language for FPGA implementation.  
 - **Xilinx Vivado** – FPGA synthesis and simulation.  
 - **MATLAB** – signal generation and fixed-point conversion.
 
-# Acknowledgement
+## Acknowledgement
 
 - Project guided by **Dr. Rohit Chaurasiya**, Asst. Professor, Department of Electrical Engineering, IIT Jammu.  
 - MATLAB signal generation code adapted from [`https://in.mathworks.com/matlabcentral/fileexchange/47181-energy-detection-zip`].  
