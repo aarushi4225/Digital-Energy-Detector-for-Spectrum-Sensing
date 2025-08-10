@@ -53,7 +53,6 @@ This hardware-centric approach provides the high performance required for real-t
 └── energy_detector.v               # Main Verilog Module
 ```
 
----
 
 ### Tools and Technologies
 
