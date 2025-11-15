@@ -65,5 +65,4 @@ This hardware-centric approach provides the high performance required for real-t
 ## Acknowledgement
 
 - Project Mentor: **Dr. Rohit Chaurasiya**, Department of Electrical Engineering, Indian Institute of Technology Jammu. 
-- MATLAB signal generation code adaptation: [`https://in.mathworks.com/matlabcentral/fileexchange/47181-energy-detection-zip`].  
-- MATLAB Fixed Point conversion and Verilog code author - Aarushi Singh.
+- MATLAB Signal generation code adaptation: [`https://in.mathworks.com/matlabcentral/fileexchange/47181-energy-detection-zip`].  
